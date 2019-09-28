@@ -1,0 +1,31 @@
+GET http://localhost
+
+###
+
+GET http://localhost/api/users
+
+###
+
+POST http://localhost/api/users
+Content-Type: application/json
+
+{
+  "id": "root",
+  "password": "12345",
+  "name": "root"
+}
+
+###
+GET http://localhost/api/users?name=root&id=root
+
+###
+POST http://localhost/api/auth/login
+Content-Type: application/json
+
+{
+  "id": "root",
+  "password": "12345"
+}
+
+###
+POST http://localhost/api/auth/logout
